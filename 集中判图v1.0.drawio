@@ -1,1 +1,37 @@
-<mxfile host="app.diagrams.net" modified="2021-04-21T02:17:21.995Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36 OPR/74.0.3911.154" version="14.6.3" etag="xEO-TqXko9Xo-E2ucyAu" type="github"><diagram id="3sjMEVS1-rRHx-kxgJhf">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-04-21T02:17:36.720Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36 OPR/74.0.3911.154" etag="qR0vQqLJlGlRE0Pq7FYF" version="14.6.3" type="github">
+  <diagram id="3sjMEVS1-rRHx-kxgJhf" name="第 1 页">
+    <mxGraphModel dx="1038" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JF2SadbLt-7BNZYVcp9J-1" value="集中判图" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry width="830" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JF2SadbLt-7BNZYVcp9J-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JF2SadbLt-7BNZYVcp9J-3" target="JF2SadbLt-7BNZYVcp9J-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JF2SadbLt-7BNZYVcp9J-3" value="网点" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="380" y="80" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JF2SadbLt-7BNZYVcp9J-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JF2SadbLt-7BNZYVcp9J-5" target="JF2SadbLt-7BNZYVcp9J-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JF2SadbLt-7BNZYVcp9J-5" value="终端(虚拟的)" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="380" y="210" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JF2SadbLt-7BNZYVcp9J-6" value="魔盒设备" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="380" y="330" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JF2SadbLt-7BNZYVcp9J-7" value="一个网点下可以有多个终端，一个终端下只能有一个魔盒设备" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="110" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JF2SadbLt-7BNZYVcp9J-8" value="业务逻辑" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="JF2SadbLt-7BNZYVcp9J-9" value="1.判图员配置关联网点下的终端&lt;br style=&quot;font-size: 13px&quot;&gt;2.每张安检图片从qt截图发送到中心，都会记录发送时间和安检图片的最大判图时间(闲时、忙时)&lt;br style=&quot;font-size: 13px&quot;&gt;3.判图员登录判图系统后，查询他所关联的终端的安检图片，按安检图片的先后顺序，那个终端下的魔盒有安检图片，分配安检图片。并显示当前安检图片的剩余判图时长。&lt;br style=&quot;font-size: 13px&quot;&gt;4.如果在判图时长内判图员没有做抉择，系统会根据当前安检图片是否有违禁品，来判断是自动开包还是自动放行" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;verticalAlign=top;fontSize=13;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="460" width="550" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
