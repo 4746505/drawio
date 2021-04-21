@@ -1,1 +1,37 @@
-<mxfile host="app.diagrams.net" modified="2021-04-21T02:20:36.292Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36 OPR/74.0.3911.154" version="14.6.3" etag="tZdksG0HPGQcMuNMoQp7" type="github"><diagram id="S7RNq6q3CSRx8i_wjZx8">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-04-21T02:46:51.396Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36 OPR/74.0.3911.154" etag="TPgVf1Xr-U-J63cGO5fX" version="14.6.3" type="github">
+  <diagram id="S7RNq6q3CSRx8i_wjZx8" name="第 1 页">
+    <mxGraphModel dx="1038" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hmHZY6hH6nGQCXQdlE-q-1" value="集中判图" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry width="830" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hmHZY6hH6nGQCXQdlE-q-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hmHZY6hH6nGQCXQdlE-q-3" target="hmHZY6hH6nGQCXQdlE-q-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hmHZY6hH6nGQCXQdlE-q-3" value="集中站" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="380" y="80" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hmHZY6hH6nGQCXQdlE-q-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="hmHZY6hH6nGQCXQdlE-q-5" target="hmHZY6hH6nGQCXQdlE-q-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hmHZY6hH6nGQCXQdlE-q-5" value="安检点" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="380" y="210" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hmHZY6hH6nGQCXQdlE-q-6" value="魔盒设备" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="380" y="330" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hmHZY6hH6nGQCXQdlE-q-8" value="业务逻辑" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="hmHZY6hH6nGQCXQdlE-q-9" value="1.判图员配置集中站，魔盒配置所属安检点和集中站&lt;br&gt;&lt;br style=&quot;font-size: 13px&quot;&gt;2.每张安检图片从魔盒截图发送到中心，都会记录发送时间。每个集中站配置有最大积压数10张，安检图片会优先向所属的集中站发送，如果所属的集中站积压数大于10，会向其它积压说未超过10张的集中站发送，如果其它集中站积压数也大于10，则继续向所属的集中站发送。&lt;br&gt;2.1集中站中的每条安检数据会有保存时间设置，如果大于10s，则安检数据会过期，不会推到集中判图终端&lt;br&gt;&lt;br style=&quot;font-size: 13px&quot;&gt;3.判图员登录判图终端后，查询他所关联的集中站的安检数据，理论上判图员只能看到他所属的集中站的安检图片，由于安检图片分发规则，判图员也可以判其它集中站的安检数据。&lt;br&gt;&lt;br style=&quot;font-size: 13px&quot;&gt;4.如果在判图时长内判图员没有做抉择，系统设置有一定个业务规则&lt;br&gt;&amp;nbsp; &amp;nbsp;规则1：判图超时，不管是否有违禁品都会发送到开包台&lt;br&gt;&amp;nbsp; &amp;nbsp;规则2：判图未超时，如果安检图片智能判图发现有重大违禁品，不管判图员是点击开包还是放行，都会把安检图片发送到开包台&lt;br&gt;&amp;nbsp; 规则3：所有安检图片，在判图终端的最大判图时长都是5s" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;verticalAlign=top;fontSize=13;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="460" width="620" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="hmHZY6hH6nGQCXQdlE-q-10" value="集中站可配置6个安检点" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="120" width="130" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
